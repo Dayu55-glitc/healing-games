@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f87171' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 3a9 9 0 1 0 9 9'%3E%3C/path%3E%3Cpath d='M12 3v9l9 0'%3E%3C/path%3E%3C/svg%3E" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Discover games that nurture your soul, calm your mind, and bring joy to your daily life." />
+  <title>Healing Games - Find Your Inner Peace</title>
+  <style>
+    /* Base styles and resets */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      background: linear-gradient(to bottom, #fff5f7, #f5f3ff);
+      min-height: 100vh;
+      color: #4a5568;
+      line-height: 1.6;
+    }
+    
+    /* Container for content alignment */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    /* Navigation styles */
+    nav {
+      background-color: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+    
+    .logo-icon {
+      background: linear-gradient(to right, #f87171, #8b5cf6);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      font-size: 24px;
+    }
+    
+    .logo-text {
+      font-size: 20px;
+      font-weight: 600;
+      background: linear-gradient(to right, #f87171, #8b5cf6);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 30px;
+    }
+    
+    .nav-links a {
+      text-decoration: none;
+      color: #4a5568;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    
+    .nav-links a:hover {
+      color: #f87171;
+    }
+    
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: #4a5568;
+    }
+    
+    /* Header styles */
+    header {
+      text-align: center;
+      padding: 60px 20px 40px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .header-bg {
+      position: absolute;
+      inset: 0;
+      opacity: 0.05;
+      pointer-events: none;
+    }
+    
+    .header-bg-icon {
+      position: absolute;
+      font-size: 24px;
+    }
+    
+    .header-bg-icon:nth-child(1) {
+      top: 10%;
+      left: 20%;
+      color: #f87171;
+    }
+    
+    .header-bg-icon:nth-child(2) {
+      top: 15%;
+      right: 25%;
+      color: #8b5cf6;
+    }
+    
+    .header-bg-icon:nth-child(3) {
+      bottom: 20%;
+      left: 30%;
+      color: #f87171;
+    }
+    
+    .title-container {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+    
+    .title-icon {
+      font-size: 30px;
+      color: #f87171;
+    }
+    
+    .title-icon.right {
+      color: #8b5cf6;
+    }
+    
+    .title {
+      font-size: 48px;
+      font-weight: bold;
+      background: linear-gradient(to right, #f87171, #8b5cf6);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      display: inline-block;
+    }
+    
+    .subtitle {
+      max-width: 700px;
+      margin: 0 auto 10px;
+      font-size: 18px;
+      line-height: 1.6;
+      color: #6b7280;
+    }
+    
+    /* Game grid styles */
+    .games-grid {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 30px;
+      padding: 40px 0;
+    }
+    
+    @media (min-width: 768px) {
+      .games-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (min-width: 1024px) {
+      .games-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    
+    /* Game card styles */
+    .game-card {
+      background: white;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+    
+    .game-card:hover {
+      transform: translateY(-5px) scale(1.02);
+      box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.15);
+    }
+    
+    .game-image {
+      height: 200px;
+      position: relative;
+      overflow: hidden;
+      background-color: #f3f4f6;
+    }
+    
+    .game-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+      backface-visibility: hidden;
+    }
+    
+    .game-card:hover .game-image img {
+      transform: scale(1.05);
+    }
+    
+    .icon-badge {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      background: rgba(255, 255, 255, 0.9);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+    
+    .rating-badge {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-weight: 500;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+    
+    .star-icon {
+      color: #f59e0b;
+    }
+    
+    .game-content {
+      padding: 24px;
+    }
+    
+    .game-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 12px;
+    }
+    
+    .game-title {
+      font-size: 24px;
+      font-weight: 600;
+      color: #1f2937;
+    }
+    
+    .game-price {
+      font-size: 18px;
+      font-weight: 500;
+      color: #8b5cf6;
+    }
+    
+    .game-description {
+      margin-bottom: 20px;
+      line-height: 1.6;
+      color: #6b7280;
+    }
+    
+    .game-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+    
+    .tag {
+      background: #fff5f7;
+      color: #f87171;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+    
+    .game-card:hover .tag {
+      background: #fecdd3;
+    }
+    
+    .play-button {
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(to right, #f87171, #8b5cf6);
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .play-button:hover {
+      background: linear-gradient(to right, #ef4444, #7c3aed);
+      transform: translateY(-2px);
+    }
+    
+    .play-button:active {
+      transform: translateY(0);
+    }
+    
+    /* Features section */
+    .features {
+      padding: 60px 0;
+      background-color: rgba(255, 255, 255, 0.7);
+    }
+    
+    .section-title {
+      text-align: center;
+      font-size: 36px;
+      font-weight: bold;
+      color: #1f2937;
+      margin-bottom: 50px;
+    }
+    
+    .features-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+    
+    @media (min-width: 768px) {
+      .features-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    
+    .feature-card {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    .feature-icon {
+      font-size: 36px;
+      margin-bottom: 15px;
+      background: linear-gradient(to right, #f87171, #8b5cf6);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    
+    .feature-title {
+      font-size: 20px;
+      font-weight: 600;
+      color: #1f2937;
+      margin-bottom: 12px;
+    }
+    
+    .feature-text {
+      color: #6b7280;
+    }
+    
+    /* Newsletter section */
+    .newsletter {
+      padding: 80px 0;
+      text-align: center;
+      background: linear-gradient(to right, rgba(248, 113, 113, 0.05), rgba(139, 92, 246, 0.05));
+    }
+    
+    .newsletter-title {
+      font-size: 32px;
+      font-weight: bold;
+      color: #1f2937;
+      margin-bottom: 15px;
+    }
+    
+    .newsletter-text {
+      max-width: 600px;
+      margin: 0 auto 30px;
+      color: #6b7280;
+    }
+    
+    .newsletter-form {
+      display: flex;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    
+    .newsletter-input {
+      flex: 1;
+      padding: 15px 20px;
+      border: 2px solid #e5e7eb;
+      border-radius: 10px 0 0 10px;
+      font-size: 16px;
+      transition: border-color 0.2s;
+    }
+    
+    .newsletter-input:focus {
+      outline: none;
+      border-color: #f87171;
+    }
+    
+    .newsletter-button {
+      background: linear-gradient(to right, #f87171, #8b5cf6);
+      color: white;
+      border: none;
+      padding: 0 25px;
+      border-radius: 0 10px 10px 0;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    
+    .newsletter-button:hover {
+      background: linear-gradient(to right, #ef4444, #7c3aed);
+    }
+    
+    /* Modal styles */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.75);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    .modal.open {
+      opacity: 1;
+    }
+    
+    .modal-content {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      width: 95%;
+      max-width: 1200px;
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      transform: scale(0.9);
+      transition: transform 0.3s ease;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    }
+    
+    .modal.open .modal-content {
+      transform: scale(1);
+    }
+    
+    .modal-header {
+      background: linear-gradient(to right, #f87171, #8b5cf6);
+      padding: 16px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .modal-title {
+      font-size: 20px;
+      font-weight: 600;
+    }
+    
+    .close-button {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transition: background 0.2s;
+    }
+    
+    .close-button:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+    
+    .modal-body {
+      flex: 1;
+      min-height: 80vh;
+      position: relative;
+    }
+    
+    .game-iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    
+    /* Footer styles */
+    footer {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 60px 20px;
+      margin-top: 40px;
+    }
+    
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 40px;
+    }
+    
+    @media (min-width: 768px) {
+      .footer-content {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+    
+    .footer-column h3 {
+      font-size: 20px;
+      font-weight: 600;
+      color: #1f2937;
+      margin-bottom: 16px;
+      position: relative;
+      display: inline-block;
+    }
+    
+    .footer-column h3::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 40px;
+      height: 2px;
+      background: linear-gradient(to right, #f87171, #8b5cf6);
+    }
+    
+    .footer-column p, 
+    .footer-column ul {
+      color: #4b5563;
+    }
+    
+    .footer-column ul {
+      list-style: none;
+    }
+    
+    .footer-column ul li {
+      margin-bottom: 12px;
+    }
+    
+    .footer-column ul li a {
+      text-decoration: none;
+      color: #4b5563;
+      transition: color 0.2s;
+      display: inline-flex;
+      align-items: center;
+    }
+    
+    .footer-column ul li a:hover {
+      color: #f87171;
+    }
+    
+    .footer-column ul li a::before {
+      content: '›';
+      margin-right: 8px;
+      color: #f87171;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    
+    .copyright {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #e5e7eb;
+      text-align: center;
+      color: #6b7280;
+      font-size: 14px;
+    }
+    
+    /* Responsive styles */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      
+      .mobile-menu-btn {
+        display: block;
+      }
+      
+      .title {
+        font-size: 36px;
+      }
+      
+      .subtitle {
+        font-size: 16px;
+      }
+      
+      .game-image {
+        height: 180px;
+      }
+      
+      .section-title {
+        font-size: 28px;
+      }
+      
+      .modal-body {
+        min-height: 400px;
+      }
+    }
+    
+    /* Mobile menu */
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 80%;
+      max-width: 300px;
+      height: 100vh;
+      background: white;
+      z-index: 20;
+      padding: 20px;
+      transition: right 0.3s ease;
+      box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .mobile-menu.open {
+      right: 0;
+    }
+    
+    .mobile-menu-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: #4a5568;
+    }
+    
+    .mobile-menu-links {
+      margin-top: 60px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    .mobile-menu-links a {
+      text-decoration: none;
+      color: #4a5568;
+      font-size: 18px;
+      font-weight: 500;
+      transition: color 0.2s;
+      padding: 10px 0;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    
+    .mobile-menu-links a:hover {
+      color: #f87171;
+    }
+    
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 15;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+    
+    .overlay.open {
+      opacity: 1;
+      visibility: visible;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="container nav-container">
+      <a href="#" class="logo">
+        <span class="logo-icon">🎮</span>
+        <span class="logo-text">Healing Games</span>
+      </a>
+      <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">Games</a>
+        <a href="#">About</a>
+        <a href="#">Blog</a>
+        <a href="#">Contact</a>
+      </div>
+      <button class="mobile-menu-btn">☰</button>
+    </div>
+  </nav>
+  
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <button class="mobile-menu-close">×</button>
+    <div class="mobile-menu-links">
+      <a href="#">Home</a>
+      <a href="#">Games</a>
+      <a href="#">About</a>
+      <a href="#">Blog</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+  <div class="overlay"></div>
+
+  <!-- Header -->
+  <header>
+    <div class="header-bg">
+      <span class="header-bg-icon">❤️</span>
+      <span class="header-bg-icon">☁️</span>
+      <span class="header-bg-icon">✨</span>
+    </div>
+    <div class="container">
+      <div class="title-container">
+        <span class="title-icon">❤️</span>
+        <h1 class="title">Find Your Inner Peace</h1>
+        <span class="title-icon right">❤️</span>
+      </div>
+      <p class="subtitle">Discover games that nurture your soul, calm your mind, and bring joy to your daily life.</p>
+      <p class="subtitle">Founded in 2020, Healing Games has helped over 500,000 people find peace and balance through interactive digital experiences.</p>
+    </div>
+  </header>
+
+  <!-- Main Content - Games Grid -->
+  <main class="container">
+    <div class="games-grid">
+      <!-- Game 1: Pancito Merge -->
+      <div class="game-card">
+        <div class="game-image">
+          <img src="./public/images/pancito.png" alt="Pancito Merge">
+          <div class="icon-badge">🧩</div>
+          <div class="rating-badge">
+            <span class="star-icon">★</span>
+            <span>4.7</span>
+          </div>
+        </div>
+        <div class="game-content">
+          <div class="game-header">
+            <h3 class="game-title">Pancito Merge</h3>
+            <span class="game-price">Free</span>
+          </div>
+          <p class="game-description">A delightful merge puzzle game where you combine cute bread characters to create new varieties. Relaxing gameplay perfect for unwinding.</p>
+          <div class="game-tags">
+            <span class="tag">Puzzle</span>
+            <span class="tag">Merge</span>
+            <span class="tag">Casual</span>
+          </div>
+          <button class="play-button" data-game="pancito">Play Now</button>
+        </div>
+      </div>
+
+      <!-- Game 2: Cubes 2048.io -->
+      <div class="game-card">
+        <div class="game-image">
+          <img src="./public/images/cubes.png" alt="Cubes 2048.io">
+          <div class="icon-badge">🎮</div>
+          <div class="rating-badge">
+            <span class="star-icon">★</span>
+            <span>4.8</span>
+          </div>
+        </div>
+        <div class="game-content">
+          <div class="game-header">
+            <h3 class="game-title">Cubes 2048.io</h3>
+            <span class="game-price">Free</span>
+          </div>
+          <p class="game-description">Merge cubes with the same numbers to reach 2048 and beyond in this addictive puzzler. Strategic thinking in a colorful 3D environment.</p>
+          <div class="game-tags">
+            <span class="tag">Puzzle</span>
+            <span class="tag">Strategy</span>
+            <span class="tag">Numbers</span>
+          </div>
+          <button class="play-button" data-game="cubes">Play Now</button>
+        </div>
+      </div>
+
+      <!-- Game 3: Doodle Road -->
+      <div class="game-card">
+        <div class="game-image">
+          <img src="./public/images/doodle.png" alt="Doodle Road">
+          <div class="icon-badge">✏️</div>
+          <div class="rating-badge">
+            <span class="star-icon">★</span>
+            <span>4.6</span>
+          </div>
+        </div>
+        <div class="game-content">
+          <div class="game-header">
+            <h3 class="game-title">Doodle Road</h3>
+            <span class="game-price">Free</span>
+          </div>
+          <p class="game-description">Draw your own path through challenges in this creative driving game. Express yourself while solving puzzles in a hand-drawn world.</p>
+          <div class="game-tags">
+            <span class="tag">Creative</span>
+            <span class="tag">Driving</span>
+            <span class="tag">Drawing</span>
+          </div>
+          <button class="play-button" data-game="doodle">Play Now</button>
+        </div>
+      </div>
+
+      <!-- Game 4: Sprunki -->
+      <div class="game-card">
+        <div class="game-image">
+          <img src="./public/images/sprunki.png" alt="Sprunki">
+          <div class="icon-badge">🏃</div>
+          <div class="rating-badge">
+            <span class="star-icon">★</span>
+            <span>4.9</span>
+          </div>
+        </div>
+        <div class="game-content">
+          <div class="game-header">
+            <h3 class="game-title">Sprunki</h3>
+            <span class="game-price">Free</span>
+          </div>
+          <p class="game-description">Guide a springy character through beautiful platforming levels. The rhythmic bouncing creates a meditative experience as you overcome obstacles.</p>
+          <div class="game-tags">
+            <span class="tag">Platformer</span>
+            <span class="tag">Adventure</span>
+            <span class="tag">Rhythm</span>
+          </div>
+          <button class="play-button" data-game="sprunki">Play Now</button>
+        </div>
+      </div>
+
+      <!-- Game 5: Duckling -->
+      <div class="game-card">
+        <div class="game-image">
+          <img src="./public/images/duckling.jpeg" alt="Duckling">
+          <div class="icon-badge">🐥</div>
+          <div class="rating-badge">
+            <span class="star-icon">★</span>
+            <span>4.8</span>
+          </div>
+        </div>
+        <div class="game-content">
+          <div class="game-header">
+            <h3 class="game-title">Duckling</h3>
+            <span class="game-price">Free</span>
+          </div>
+          <p class="game-description">Take care of adorable ducklings in this heartwarming nurturing game. Watch them grow as you provide care in a peaceful pond setting.</p>
+          <div class="game-tags">
+            <span class="tag">Nurturing</span>
+            <span class="tag">Relaxation</span>
+            <span class="tag">Cute</span>
+          </div>
+          <button class="play-button" data-game="duckling">Play Now</button>
+        </div>
+      </div>
+
+      <!-- Game 6: Store Manager -->
+      <div class="game-card">
+        <div class="game-image">
+          <img src="./public/images/store.png" alt="Store Manager">
+          <div class="icon-badge">🏢</div>
+          <div class="rating-badge">
+            <span class="star-icon">★</span>
+            <span>4.7</span>
+          </div>
+        </div>
+        <div class="game-content">
+          <div class="game-header">
+            <h3 class="game-title">Store Manager</h3>
+            <span class="game-price">Free</span>
+          </div>
+          <p class="game-description">Run your own supermarket in this calming simulation. Organize products, help customers, and grow your business at your own pace.</p>
+          <div class="game-tags">
+            <span class="tag">Simulation</span>
+            <span class="tag">Management</span>
+            <span class="tag">Casual</span>
+          </div>
+          <button class="play-button" data-game="store">Play Now</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="container">
+      <h2 class="section-title">Why Choose Our Games</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🧘</div>
+          <h3 class="feature-title">Mindfulness</h3>
+          <p class="feature-text">Our games are designed to promote mindfulness and present-moment awareness, helping reduce stress and anxiety.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🌱</div>
+          <h3 class="feature-title">Personal Growth</h3>
+          <p class="feature-text">Experience games that foster personal growth and emotional well-being through meaningful interactions.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💫</div>
+          <h3 class="feature-title">Creative Expression</h3>
+          <p class="feature-text">Express yourself creatively and discover new ways to explore your imagination through our interactive experiences.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="newsletter">
+    <div class="container">
+      <h2 class="newsletter-title">Stay Updated</h2>
+      <p class="newsletter-text">Subscribe to our newsletter to receive updates on new game releases, wellness tips, and exclusive offers.</p>
+      <form class="newsletter-form">
+        <input type="email" class="newsletter-input" placeholder="Your email address" required>
+        <button type="submit" class="newsletter-button">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>About Us</h3>
+          <p>Dedicated to bringing peace and healing through interactive experiences and mindful gaming.</p>
+        </div>
+        <div class="footer-column">
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="#">Games</a></li>
+            <li><a href="#">Wellness Blog</a></li>
+            <li><a href="#">Community</a></li>
+            <li><a href="#">Events</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Support</h3>
+          <ul>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Connect</h3>
+          <ul>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Discord</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2023 Healing Games. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Game Modal -->
+  <div id="gameModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="modalTitle" class="modal-title">Game Title</h2>
+        <button id="closeModal" class="close-button">×</button>
+      </div>
+      <div class="modal-body">
+        <iframe id="gameIframe" class="game-iframe" src="" title="Game" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript for interactions -->
+  <script>
+    // DOM Elements
+    const modal = document.getElementById('gameModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const gameIframe = document.getElementById('gameIframe');
+    const closeBtn = document.getElementById('closeModal');
+    const playButtons = document.querySelectorAll('.play-button');
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const mobileMenuClose = document.querySelector('.mobile-menu-close');
+    const overlay = document.querySelector('.overlay');
+    
+    // Game data
+    const gameUrls = {
+      pancito: "https://html-classic.itch.zone/html/13071975/index.html",
+      cubes: "https://www.crazygames.com/embed/cubes-2048-io",
+      doodle: "https://www.crazygames.com/embed/doodle-road",
+      sprunki: "https://html-classic.itch.zone/html/11407110/index.html?v=1730332583",
+      duckling: "https://html-classic.itch.zone/html/1662039/index.html",
+      store: "https://www.crazygames.com/embed/supermarket-simulator-cashier-game"
+    };
+    
+    const gameTitles = {
+      pancito: "Pancito Merge",
+      cubes: "Cubes 2048.io",
+      doodle: "Doodle Road",
+      sprunki: "Sprunki",
+      duckling: "Duckling",
+      store: "Store Manager"
+    };
+    
+    // Open modal when Play button is clicked
+    playButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const game = button.getAttribute('data-game');
+        if (game && gameUrls[game]) {
+          modalTitle.textContent = gameTitles[game];
+          gameIframe.src = gameUrls[game];
+          modal.style.display = 'flex';
+          modal.classList.add('open');
+          document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+        }
+      });
+    });
+    
+    // Close modal when close button is clicked
+    closeBtn.addEventListener('click', () => {
+      closeModal();
+    });
+    
+    // Close modal when clicking outside the content
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+    
+    // Close modal function
+    function closeModal() {
+      modal.classList.remove('open');
+      setTimeout(() => {
+        modal.style.display = 'none';
+        gameIframe.src = ''; // Reset iframe src
+      }, 300); // Wait for animation to complete
+      document.body.style.overflow = ''; // Restore scrolling
+    }
+    
+    // Close modal with Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.style.display === 'flex') {
+        closeModal();
+      }
+    });
+    
+    // Mobile menu toggle
+    if (mobileMenuBtn) {
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.add('open');
+        overlay.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      });
+    }
+    
+    if (mobileMenuClose) {
+      mobileMenuClose.addEventListener('click', () => {
+        closeMobileMenu();
+      });
+    }
+    
+    if (overlay) {
+      overlay.addEventListener('click', () => {
+        closeMobileMenu();
+      });
+    }
+    
+    function closeMobileMenu() {
+      mobileMenu.classList.remove('open');
+      overlay.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  </script>
+</body>
+</html>
