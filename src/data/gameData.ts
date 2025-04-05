@@ -53,7 +53,7 @@ export const gameData: GameType[] = [
     image: "https://images.unsplash.com/photo-1465146633011-14f8e0781093?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
     icon: "🏃",
     tags: ["Platformer", "Adventure", "Rhythm"],
-    url: "https://html-classic.itch.zone/html/11407110/index.html?v=1730332583"
+    url: "https://itch.io/embed-upload/11407110?color=333333"
   },
   {
     id: "duckling",
