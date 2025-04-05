@@ -45,15 +45,15 @@ export const gameData: GameType[] = [
     url: "https://www.crazygames.com/embed/doodle-road"
   },
   {
-    id: "sprunki",
-    title: "Sprunki",
-    description: "Guide a springy character through beautiful platforming levels. The rhythmic bouncing creates a meditative experience as you overcome obstacles.",
+    id: "cut-the-rope",
+    title: "Cut the Rope",
+    description: "Feed the adorable Om Nom with candy by cutting ropes strategically. This physics-based puzzle game combines cute characters with challenging gameplay that helps you relax and think creatively.",
     price: "Free",
     rating: "4.9",
-    image: "https://images.unsplash.com/photo-1465146633011-14f8e0781093?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-    icon: "🏃",
-    tags: ["Platformer", "Adventure", "Rhythm"],
-    url: "https://itch.io/embed-upload/11407110?color=333333"
+    image: "./public/images/cut-the-rope.jpeg",
+    icon: "🍬",
+    tags: ["Puzzle", "Physics", "Casual"],
+    url: "https://www.crazygames.com/embed/cut-the-rope-ebx"
   },
   {
     id: "duckling",
